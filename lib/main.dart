@@ -9,14 +9,16 @@ void main() {
       backdropPath: 'aaa',
       genreIds: [1, 2],
       voteAverage: 1.8,
-      overview: '');
+      overview: '',
+      releaseDate: 2200);
   Movie movie1 = const Movie(
       id: 1,
       title: 'aaa',
       backdropPath: 'aaa',
       genreIds: [1, 2],
       voteAverage: 1.8,
-      overview: '');
+      overview: '',
+      releaseDate: 2200);
   print(movie == movie1);
   print(movie.hashCode);
   print(movie1.hashCode);
