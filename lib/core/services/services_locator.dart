@@ -2,12 +2,16 @@ import 'package:entertainment_app/movies_module/data/datasource/movie_remote_dat
 import 'package:entertainment_app/movies_module/data/repository/movies_repository.dart';
 import 'package:entertainment_app/movies_module/domain/repository/base_movies_repository.dart';
 import 'package:entertainment_app/movies_module/domain/usecase/get_now_playing_movies_usecase.dart';
+import 'package:entertainment_app/movies_module/presentation/controller/movies_bloc.dart';
 import 'package:get_it/get_it.dart';
 
 final sl = GetIt.instance;
 
 class ServiceLocator {
   void init() {
+    /// MoviesBloc
+    sl.registerFactory(() => MoviesBloc(sl()));
+
     /// UseCases
     sl.registerLazySingleton(() => GetNowPlayingMoviesUseCase(sl()));
 
