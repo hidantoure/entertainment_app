@@ -4,4 +4,8 @@ class AppContants {
 
   static const String nowPlayingMoviePath =
       '$baseUrl/movie/now_playing?api_key=$apiKey';
+  static const String popularMoviePath =
+      '$baseUrl/movie/popular?api_key=$apiKey';
+  static const String topRatedMoviePath =
+      '$baseUrl/movie/top_rated?api_key=$apiKey';
 }
