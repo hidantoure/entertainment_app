@@ -3,6 +3,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:entertainment_app/core/utils/app_constants.dart';
 import 'package:entertainment_app/movies_module/presentation/components/popular_component.dart';
+import 'package:entertainment_app/movies_module/presentation/controller/movies_events.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -21,7 +22,10 @@ class MainMoviesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     print('build');
     return BlocProvider(
-      create: (BuildContext context) => sl<MoviesBloc>(),
+      create: (BuildContext context) => sl<MoviesBloc>()
+        ..add(GetNowPlayingMoviesEvent())
+        ..add(GetPopularMoviesEvent())
+        ..add(GetTopRatedMoviesEvent()),
       child: Scaffold(
         backgroundColor: Colors.grey.shade900,
         body: SingleChildScrollView(
