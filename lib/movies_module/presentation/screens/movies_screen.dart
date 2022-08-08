@@ -3,7 +3,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:entertainment_app/core/utils/app_constants.dart';
 import 'package:entertainment_app/movies_module/presentation/components/popular_component.dart';
-import 'package:entertainment_app/movies_module/presentation/controller/movies_events.dart';
+import 'package:entertainment_app/movies_module/presentation/controller/movies_bloc/movies_events.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -13,7 +13,7 @@ import '../../../core/services/services_locator.dart';
 import '../../../core/utils/dummy.dart';
 import '../components/now_playing_component.dart';
 import '../components/top_rated_component.dart';
-import '../controller/movies_bloc.dart';
+import '../controller/movies_bloc/movies_bloc.dart';
 
 class MainMoviesScreen extends StatelessWidget {
   const MainMoviesScreen({Key? key}) : super(key: key);

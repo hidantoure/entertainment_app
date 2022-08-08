@@ -2,12 +2,12 @@ import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:entertainment_app/core/utils/enums.dart';
-import 'package:entertainment_app/movies_module/presentation/controller/movies_bloc.dart';
+import 'package:entertainment_app/movies_module/presentation/controller/movies_bloc/movies_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/utils/app_constants.dart';
-import '../controller/movies_states.dart';
+import '../controller/movies_bloc/movies_states.dart';
 
 class NowPlayingComponent extends StatelessWidget {
   const NowPlayingComponent({Key? key}) : super(key: key);
